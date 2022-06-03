@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_width_height">150dp</dimen>
+    <dimen name="logo_margin_top">90dp</dimen>
+    <dimen name="username_login_margin_top">16dp</dimen>
+    <dimen name="login_editText_width">350dp</dimen>
+    <dimen name="registerLbl_marginTop">15dp</dimen>
+    <dimen name="login_registerlbl_size">20sp</dimen>
+    <dimen name="login_register_button_height_width">250dp</dimen>
+    <dimen name="logibtn_marginTop">20dp</dimen>
+    <dimen name="cb_text_size">20sp</dimen>
+</resources>

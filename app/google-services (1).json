@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "694630177555",
+    "project_id": "gym-buds",
+    "storage_bucket": "gym-buds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694630177555:android:b3cef82cbaf334addf58e6",
+        "android_client_info": {
+          "package_name": "com.example.gymbuds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694630177555-ith5jtg48kc0gcd541bo02v7k7r3blgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gymbuds",
+            "certificate_hash": "4f9fd12ce71e2b4e454392ac93064f83e06cfb36"
+          }
+        },
+        {
+          "client_id": "694630177555-7r61h76rns9ilus23ctol69qrt6kj7ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBOb_0regrRqMXtLE9MWQ3rZJijBcXwc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694630177555-7r61h76rns9ilus23ctol69qrt6kj7ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
