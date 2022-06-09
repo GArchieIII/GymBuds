@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import com.example.gymbuds.activities.BaseActivity
 import com.example.gymbuds.firestore.FirestoreClass
 import com.example.gymbuds.models.Bud
 import com.example.gymbuds.utils.Constants
@@ -11,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_bud_register.*
 
-class BudRegisterActivity : AppCompatActivity(),View.OnClickListener {
+class BudRegisterActivity : BaseActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

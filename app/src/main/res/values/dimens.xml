@@ -8,5 +8,10 @@
     <dimen name="login_registerlbl_size">20sp</dimen>
     <dimen name="login_register_button_height_width">250dp</dimen>
     <dimen name="logibtn_marginTop">20dp</dimen>
-    <dimen name="cb_text_size">20sp</dimen>
+    <dimen name="cb_text_size">24sp</dimen>
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_bar_margin_start">10dp</dimen>
+    <dimen name="progress_text_size">14sp</dimen>
+    <dimen name="forgot_password_text_size">12sp</dimen>
 </resources>

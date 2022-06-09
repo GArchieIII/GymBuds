@@ -11,4 +11,7 @@
     <color name="login_button_text_color">#FFEB3B</color>
     <color name="primary_text_color">#FF000000</color>
     <color name="app_background">#FFEB3B</color>
+    <color name="colorSnackBarError">#F72400</color>
+    <color name="colorSnackBarSuccess">#8BC34A</color>
+    <color name="secondary_text_color">#787878</color>
 </resources>
