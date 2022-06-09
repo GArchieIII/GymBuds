@@ -14,4 +14,5 @@
     <dimen name="progress_bar_margin_start">10dp</dimen>
     <dimen name="progress_text_size">14sp</dimen>
     <dimen name="forgot_password_text_size">12sp</dimen>
+    <dimen name="frame_layout_height">150dp</dimen>
 </resources>

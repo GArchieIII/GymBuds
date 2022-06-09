@@ -17,4 +17,7 @@
     <string name="hint_password">Password</string>
     <string name="please_wait">Please Wait</string>
     <string name="forgot_password_text">Forgot Password</string>
+    <string name="forgot_password"><b>Forgot Password</b></string>
+    <string name="forgot_password_description">Enter your e-mail addresss and we\'ll send you an email to reset your password</string>
+    <string name="retrieve_password">Retrieve Password</string>
 </resources>
