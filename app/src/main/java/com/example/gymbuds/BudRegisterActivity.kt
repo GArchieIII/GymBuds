@@ -1,10 +1,13 @@
 package com.example.gymbuds
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
 import com.example.gymbuds.activities.BaseActivity
+import com.example.gymbuds.activities.SettingsActivity
 import com.example.gymbuds.firestore.FirestoreClass
 import com.example.gymbuds.models.Bud
 import com.example.gymbuds.utils.Constants
@@ -17,6 +20,7 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bud_register)
+        rbtn_register.setOnClickListener(this)
     }
 
     fun createBud(){
@@ -34,12 +38,13 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
                             "",0,edt_city.text.toString().trim{it<' '},
                             edt_state.text.toString().trim{it<' '},
                             "",
-                            edt_where_you_train.text.toString().trim{it<' '},
+                            "",
                             getGender(),
                             "",
                             email,password
 
                         )
+                        FirestoreClass().registerBud(this@BudRegisterActivity,bud)
                     }
                 }
 
@@ -50,7 +55,12 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
 
 
     }
-    fun budSignInSuccess(){
+    fun budRegisterSuccess(){
+        hideProgressDialog()
+        Toast.makeText(this,resources.getString(R.string.register_success),Toast.LENGTH_SHORT).show()
+
+        FirebaseAuth.getInstance().signOut()
+        finish()
 
 
     }
@@ -71,9 +81,6 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
                 return false
             }
             TextUtils.isEmpty(edt_reg_email.toString().trim{it<' '})->{
-                return false
-            }
-            TextUtils.isEmpty(edt_where_you_train.text.toString().trim{it<' '})->{
                 return false
             }
             else->{
@@ -102,8 +109,8 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
     override fun onClick(p0: View?){
         if(p0!=null){
             when(p0.id){
-                R.id.btn_register->{
-                    createBud()
+                R.id.rbtn_register->{
+                    startActivity(Intent(this@BudRegisterActivity, SettingsActivity::class.java))
                 }
             }
         }

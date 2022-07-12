@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="@string/hint_firstName"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/til_email"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             >
             <CheckBox
                 android:id="@+id/cbMale"
@@ -157,7 +157,7 @@
             app:layout_constraintTop_toBottomOf="@id/llcbgender"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_city"
@@ -219,36 +219,27 @@
             app:layout_constraintTop_toBottomOf="@id/llcity_state"
             />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_where_you_train"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/hint_gym"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtwhere_you_train_lbl">
-
-        <EditText
-            android:id="@+id/edt_where_you_train"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_inputbox"
-            />
-        </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/edt_where_you_train"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_inputbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraint_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llcbgender"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
 
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/rbtn_register"
             android:layout_width="match_parent"
             android:text="@string/registerbtn_lbl"
             android:textColor="@color/app_background"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_where_you_train"
+            app:layout_constraintTop_toBottomOf="@id/llcity_state"
             android:background="@drawable/custom_button"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"

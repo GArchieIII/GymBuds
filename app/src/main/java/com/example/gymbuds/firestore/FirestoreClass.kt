@@ -1,5 +1,6 @@
 package com.example.gymbuds.firestore
 
+import android.util.Log
 import com.example.gymbuds.BudRegisterActivity
 import com.example.gymbuds.MainActivity
 import com.example.gymbuds.models.Bud
@@ -15,11 +16,16 @@ class FirestoreClass {
             .document(budInfo.budId)
             .set(budInfo, SetOptions.merge())
             .addOnSuccessListener{
+                activity.budRegisterSuccess()
 
             }
-            .addOnFailureListener{
-
-
+            .addOnFailureListener { e ->
+                activity.hideProgressDialog()
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while registering the user",
+                    e
+                )
             }
     }
 }

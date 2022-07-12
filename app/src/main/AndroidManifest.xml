@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymBuds">
         <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ForgotPasswordActivity"
             android:exported="false" />
         <activity

@@ -20,4 +20,9 @@
     <string name="forgot_password"><b>Forgot Password</b></string>
     <string name="forgot_password_description">Enter your e-mail addresss and we\'ll send you an email to reset your password</string>
     <string name="retrieve_password">Retrieve Password</string>
+    <string name="edit_info">Edit Info</string>
+    <string name="settings_toolbarlbl">Settings</string>
+    <string name="savebtn_lbl">Save</string>
+    <string name="profile_info_toolbarlbl">Profile Info</string>
+    <string name="register_success">Successfully Registered</string>
 </resources>
