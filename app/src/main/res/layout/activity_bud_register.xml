@@ -36,9 +36,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="@string/hint_firstName"
             android:layout_marginTop="3dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/inputlbl_text_size"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userprofpic"
@@ -47,7 +48,7 @@
             <EditText
                 android:id="@+id/edt_reg_Fname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 android:background="@drawable/custom_inputbox"
                 />
 
@@ -69,7 +70,7 @@
             <EditText
                 android:id="@+id/edt_reg_Lname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 android:background="@drawable/custom_inputbox"
                 />
 
@@ -91,7 +92,7 @@
             <EditText
                 android:id="@+id/edt_reg_email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 android:background="@drawable/custom_inputbox"
                 />
 
@@ -113,7 +114,7 @@
                 <EditText
                     android:id="@+id/edt_reg_password"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/editText_height"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -176,7 +177,7 @@
             <EditText
                 android:id="@+id/edt_city"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 android:background="@drawable/custom_inputbox"
                 />
 
@@ -198,7 +199,7 @@
                 <EditText
                     android:id="@+id/edt_state"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/editText_height"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -222,10 +223,10 @@
             <EditText
                 android:id="@+id/edt_where_you_train"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 android:background="@drawable/custom_inputbox"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraint_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/llcbgender"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
@@ -235,8 +236,10 @@
             android:id="@+id/rbtn_register"
             android:layout_width="match_parent"
             android:text="@string/registerbtn_lbl"
+            android:textSize="@dimen/btn_text_size"
+            android:textAlignment="center"
             android:textColor="@color/app_background"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btn_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/llcity_state"

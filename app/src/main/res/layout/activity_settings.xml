@@ -47,7 +47,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/set_userprofpic"
@@ -56,7 +56,7 @@
                 <EditText
                     android:id="@+id/set_edt_reg_Fname"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -69,7 +69,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/set_til_firstName"
@@ -78,7 +78,7 @@
                 <EditText
                     android:id="@+id/set_edt_reg_Lname"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -91,7 +91,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/set_til_lastName"
@@ -100,7 +100,7 @@
                 <EditText
                     android:id="@+id/set_edt_reg_email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -113,7 +113,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/set_til_email"
@@ -122,7 +122,7 @@
                 <EditText
                     android:id="@+id/set_edt_reg_password"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/custom_inputbox"
                     />
 
@@ -177,7 +177,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/editText_height"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/set_til_lastName">
@@ -185,7 +185,7 @@
                     <EditText
                         android:id="@+id/set_edt_city"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="@drawable/custom_inputbox"
                         />
 
@@ -199,7 +199,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/editText_height"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/set_til_lastName">
@@ -207,7 +207,7 @@
                     <EditText
                         android:id="@+id/set_edt_state"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="@drawable/custom_inputbox"
                         />
 
@@ -231,7 +231,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/set_til_where_you_train"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/hint_gym"
                 android:layout_marginTop="5dp"
@@ -244,7 +244,7 @@
                 <EditText
                     android:id="@+id/set_edt_where_you_train"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/custom_inputbox"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -253,8 +253,10 @@
                 android:id="@+id/set_btn_save"
                 android:layout_width="match_parent"
                 android:text="@string/savebtn_lbl"
+                android:textSize="@dimen/btn_text_size"
+                android:textAlignment="center"
                 android:textColor="@color/app_background"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/btn_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/set_til_where_you_train"

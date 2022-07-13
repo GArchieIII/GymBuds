@@ -18,4 +18,10 @@
     <dimen name="profile_pick_size">200dp</dimen>
     <dimen name="proName_txtSize">20sp</dimen>
     <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="btn_text_size">20sp</dimen>
+    <dimen name="inputlbl_text_size">20sp</dimen>
+    <dimen name="editText_height">35dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="forgot_passwordbtn">220dp</dimen>
+    <dimen name="btnlbl_text_size">20sp</dimen>
 </resources>
