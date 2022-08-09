@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
-    tools:context=".BudRegisterActivity">
+    tools:context=".activities.BudRegisterActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,18 +38,18 @@
             android:layout_marginTop="3dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/inputlbl_text_size"
+            android:layout_marginBottom="10dp"
+            android:layout_height="@dimen/editText_height"
+            android:background="@drawable/custom_inputbox"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userprofpic"
             >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_reg_Fname"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/editText_height"
-                android:background="@drawable/custom_inputbox"
+                android:layout_height="match_parent"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,17 +61,17 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_height="wrap_content"
+            android:background="@drawable/custom_inputbox"
+            android:layout_height="@dimen/editText_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/til_firstName"
             >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_reg_Lname"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/editText_height"
-                android:background="@drawable/custom_inputbox"
+                android:layout_height="match_parent"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -81,19 +81,20 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="@string/hint_email"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_height="wrap_content"
+            android:background="@drawable/custom_inputbox"
+            android:layout_height="@dimen/editText_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/til_lastName"
             >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_reg_email"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/editText_height"
-                android:background="@drawable/custom_inputbox"
+                android:layout_height="match_parent"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,19 +104,20 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/hint_password"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/editText_height"
+                android:background="@drawable/custom_inputbox"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/til_email"
                 >
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_reg_password"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/editText_height"
-                    android:background="@drawable/custom_inputbox"
+                    android:layout_height="match_parent"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -161,47 +163,45 @@
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_city"
+                android:layout_weight=".33"
                 android:layout_width="0dp"
-                android:layout_weight=".5"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/hint_city"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_height="match_parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/til_lastName">
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
-            <EditText
-                android:id="@+id/edt_city"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/editText_height"
-                android:background="@drawable/custom_inputbox"
-                />
+                <AutoCompleteTextView
+                    android:id="@+id/countrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_weight=".33"
+                android:layout_width="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stateSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_state"
+                android:layout_weight=".33"
                 android:layout_width="0dp"
-                android:layout_weight=".5"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/hint_state"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_height="match_parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/til_lastName">
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
-                <EditText
-                    android:id="@+id/edt_state"
+                <AutoCompleteTextView
+                    android:id="@+id/citySpinner"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/editText_height"
-                    android:background="@drawable/custom_inputbox"
-                    />
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -213,7 +213,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/editText_height"
             android:text="@string/lbl_where_you_train"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -25,4 +25,32 @@
     <string name="savebtn_lbl">Save</string>
     <string name="profile_info_toolbarlbl">Profile Info</string>
     <string name="register_success">Successfully Registered</string>
+    <string name="err_enter_username">Enter Username</string>
+    <string name="err_enter_password">Enter Password</string>
+    <string-array name="us_states">
+        <item>Alabama</item> <item>West Virginia</item> <item> Wisconsin</item>
+        <item>Alaska</item>   <item>Washington</item>   <item>Wyoming</item>
+        <item>Arizona</item>   <item>Virginia</item>
+        <item>Arkansas</item>   <item>Vermont</item>
+        <item>California</item>   <item>Utah</item>
+        <item>Colorado</item>   <item>Texas</item>
+        <item>Connecticut</item>   <item>Tennessee</item>
+        <item>Delaware</item>   <item>South Dakota</item>
+        <item>Florida</item>   <item>South Carolina</item>
+        <item>Georgia</item>   <item>Rhode Island</item>
+        <item>Hawaii</item>   <item>Pennsylvania</item>
+        <item>Idaho</item>   <item>Oregon</item>
+        <item>Illinois</item>   <item>Oklahoma</item>
+        <item>Indiana</item>   <item>Ohio</item>
+        <item>Iowa</item>   <item>North Dakota</item>
+        <item>Kansas</item>   <item>North Carolina</item>
+        <item>Kentucky</item>   <item>New York</item>
+        <item>Louisiana</item>   <item>New Mexico</item>
+        <item>Maine</item>   <item>New Jersey</item>
+        <item>Maryland</item>   <item>New Hampshire</item>
+        <item>Massachusetts</item>   <item>Nevada</item>
+        <item>Michigan</item>   <item>Nebraska</item>
+        <item>Minnesota</item>   <item>Montana</item>
+        <item>Mississippi</item>   <item>Missouri</item>
+    </string-array>
 </resources>

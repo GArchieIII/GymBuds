@@ -1,16 +1,15 @@
-package com.example.gymbuds
+package com.example.gymbuds.activities
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.example.gymbuds.activities.BaseActivity
-import com.example.gymbuds.activities.SettingsActivity
+import com.example.gymbuds.R
 import com.example.gymbuds.firestore.FirestoreClass
 import com.example.gymbuds.models.Bud
 import com.example.gymbuds.utils.Constants
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_bud_register.*
@@ -18,27 +17,38 @@ import kotlinx.android.synthetic.main.activity_bud_register.*
 class BudRegisterActivity : BaseActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bud_register)
         rbtn_register.setOnClickListener(this)
+        cbMale.setOnClickListener{
+            cbFemale.isChecked=false
+        }
+        cbFemale.setOnClickListener{
+            cbMale.isChecked=false
+        }
+
+        val adapter= ArrayAdapter(this,
+            R.layout.list_item,resources.getStringArray(R.array.us_states))
+        stateSpinner.setAdapter(adapter)
     }
 
     fun createBud(){
+        showProgressDialog("Please Wait")
         if(validateInput()){
             val email=edt_reg_email.text.toString().trim{it<' '}
             val password=edt_reg_password.text.toString().trim{it<' '}
+            FirebaseApp.initializeApp(this)
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener{
                     if(it.isSuccessful){
                         val firebaseuser: FirebaseUser=it.result!!.user!!
-                        val bud= Bud(
-                            "",
+                        val bud= Bud(firebaseuser.uid,
                             edt_reg_Fname.text.toString().trim{it<' '},
                             edt_reg_Lname.text.toString().trim{it<' '},
-                            "",0,edt_city.text.toString().trim{it<' '},
-                            edt_state.text.toString().trim{it<' '},
-                            "",
-                            "",
+                            "",0,citySpinner.text.toString().trim{it<' '},
+                            stateSpinner.text.toString().trim{it<' '},
+                            "", edt_where_you_train.text.toString().trim{it<' '},
                             getGender(),
                             "",
                             email,password
@@ -74,10 +84,10 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
             TextUtils.isEmpty(edt_reg_Lname.text.toString().trim{it<' '})->{
                 return false
             }
-            TextUtils.isEmpty(edt_city.text.toString().trim{it<' '})->{
+            TextUtils.isEmpty(citySpinner.text.toString().trim{it<' '})->{
                 return false
             }
-            TextUtils.isEmpty(edt_state.text.toString().trim{it<' '})->{
+            TextUtils.isEmpty(stateSpinner.text.toString().trim{it<' '})->{
                 return false
             }
             TextUtils.isEmpty(edt_reg_email.toString().trim{it<' '})->{
@@ -109,8 +119,8 @@ class BudRegisterActivity : BaseActivity(),View.OnClickListener {
     override fun onClick(p0: View?){
         if(p0!=null){
             when(p0.id){
-                R.id.rbtn_register->{
-                    startActivity(Intent(this@BudRegisterActivity, SettingsActivity::class.java))
+                R.id.rbtn_register ->{
+                    createBud()
                 }
             }
         }

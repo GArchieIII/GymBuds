@@ -22,7 +22,10 @@ object Constants {
     const val PROFILE_COMPLETED:String="profileCompleted"
     const val MALE:String="Male"
     const val FEMALE:String="Female"
+    const val MYBUD_PREFERENCES:String="BudPrefs"
     const val PICK_IMAGE_RESULT_CODE=2
+    const val LOGGED_IN_BUDNAME:String="logged_in_budname"
+    const val EXTRA_BUD_DETAILS:String="extra_bud_details"
 
 
     fun showImageChooser(activity: Activity){
@@ -40,6 +43,7 @@ object Constants {
         return MimeTypeMap.getSingleton()
             .getExtensionFromMimeType(activity.contentResolver.getType(uri!!))
     }
+
 
 
 

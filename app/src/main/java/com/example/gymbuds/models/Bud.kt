@@ -1,7 +1,12 @@
 package com.example.gymbuds.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+
  data class Bud(
-     val budId:String="",
+     val id:String="",
     val first_name:String="",
     val last_name:String="",
     val profPic:String="",
@@ -15,5 +20,5 @@ package com.example.gymbuds.models
      val email:String="",
      val password:String=""
 
-) {
+): Parcelable {
 }

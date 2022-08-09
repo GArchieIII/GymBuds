@@ -169,47 +169,48 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/set_til_city"
                     android:layout_width="0dp"
-                    android:layout_weight=".5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="@string/hint_city"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_weight=".33"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:layout_height="@dimen/editText_height"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/set_til_lastName">
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
-                    <EditText
-                        android:id="@+id/set_edt_city"
+                    <AutoCompleteTextView
+                        android:id="@+id/setCountrySpinner"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/custom_inputbox"
-                        />
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".33"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/setStateSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/set_til_state"
                     android:layout_width="0dp"
-                    android:layout_weight=".5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="@string/hint_state"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_height="@dimen/editText_height"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/set_til_lastName">
+                    android:layout_weight=".33"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
-                    <EditText
-                        android:id="@+id/set_edt_state"
+                    <AutoCompleteTextView
+                        android:id="@+id/stateSpinner"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/custom_inputbox"
-                        />
+                        android:layout_height="wrap_content"
+                        android:inputType="none"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
